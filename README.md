@@ -1,8 +1,16 @@
 # canvas-gif-encoder
 
-[![npm version](https://badge.fury.io/js/canvas-gif-encoder.svg)](https://www.npmjs.com/package/canvas-gif-encoder)
+[![npm](https://img.shields.io/npm/v/canvas-gif-encoder.svg)](https://www.npmjs.com/package/canvas-gif-encoder)
 
 A package to encode animated GIFs. Input frames are provided through a canvas, and the output is provided through a `ReadStream`.
+
+## Installation
+
+Install using npm:
+
+```bash
+npm i canvas-gif-encoder
+```
 
 ## Example
 

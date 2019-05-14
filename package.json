@@ -1,6 +1,6 @@
 {
   "name": "canvas-gif-encoder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encodes an animated GIF by reading frames from a canvas.",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Borka223/canvas-gif-encoder",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Borka223/canvas-gif-encoder.git"
+    "type": "git",
+    "url": "https://github.com/Borka223/canvas-gif-encoder.git"
   }
 }
