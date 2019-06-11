@@ -19,9 +19,9 @@
   "dependencies": {
     "canvas": "2.5.0"
   },
-  "homepage": "https://github.com/Borka223/canvas-gif-encoder",
+  "homepage": "https://github.com/bcafuk/canvas-gif-encoder",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Borka223/canvas-gif-encoder.git"
+    "url": "https://github.com/bcafuk/canvas-gif-encoder.git"
   }
 }
