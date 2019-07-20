@@ -1,5 +1,6 @@
 'use strict';
 
+const MAX_CODE_LENGTH = 12;
 const PACKER_BITS_PER_ELEMENT = 8;
 const PACKER_BLOCK_SIZE_LIMIT = 1 << PACKER_BITS_PER_ELEMENT;
 
@@ -101,17 +102,15 @@ let encode = function(minCodeSize, data) {
 			++dictionarySize;
 			codeLength = Math.ceil(Math.log2(dictionarySize));
 
+			if (dictionarySize >= (1 << MAX_CODE_LENGTH)) {
+				packer.write(CLEAR_CODE, codeLength);
+				dictionary = new Map();
+				dictionarySize = END_CODE + 1;
+
+				codeLength = Math.ceil(Math.log2(dictionarySize));
+			}
+
 			phrase = char;
-		}
-
-		if (codeLength > 12) {
-			packer.write(CLEAR_CODE, 12);
-			packer.flush();
-			output = output.concat(packer.result);
-			packer = new CodePacker();
-
-			dictionary = new Map();
-			dictionarySize = END_CODE + 1;
 		}
 	}
 
